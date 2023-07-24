@@ -27,6 +27,30 @@ public class Calculator {
 			int answer = subtract(num1, num2);
 			System.out.print(answer);
 		}
+		else if(choice.equals("multiply")) {
+			System.out.print("Please enter a number: ");
+			int num1 = input.nextInt();
+			System.out.print("Please enter another number: ");
+			int num2 = input.nextInt();
+			
+			int answer = multiply(num1, num2);
+			System.out.print(answer);
+		}
+		else if(choice.equals("divide")) {
+			System.out.print("Please enter a number: ");
+			int num1 = input.nextInt();
+			System.out.print("Please enter another number: ");
+			int num2 = input.nextInt();
+			
+			if(num2 == 0) {
+				System.out.println("Cannot divide by zero");
+			}
+			else {
+				int answer = divide(num1, num2);
+				System.out.print(answer);
+			}
+			
+		}
 		
 	}
 	
@@ -43,14 +67,7 @@ public class Calculator {
 	}
 	
 	public static int divide(int a, int b) {
-		int ans = 0;
-		if(b != 0) {
-			ans = a / b;
-		}
-		else {
-			System.out.println("Cannot divide by zero");
-		}
-		return ans;
+		return a / b;
 	}
 
 }
